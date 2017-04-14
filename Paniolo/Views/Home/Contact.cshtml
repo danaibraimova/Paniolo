@@ -1,0 +1,43 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+        <div class="content">
+            <div>
+                <div>
+                   
+                    <h4>Comments and Suggestions? Just fill in the form below.</h4>
+                    <form action="contact.html">
+                        <label for="name">
+                            <span class="text">Your Name:</span>
+                            <input type="text" name="name" id="name">
+                        </label>
+                        <label for="email">
+                            <span>Your E-mail:</span>
+                            <input type="text" name="email" id="email">
+                        </label>
+                        <label for="subject">
+                            <span>Subject:</span>
+                            <input type="text" name="subject" id="subject">
+                        </label>
+                        <label for="message">
+                            <span>Your Message:</span>
+                            <textarea name="message" id="message"></textarea>
+                        </label>
+                        <input type="submit" value="">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            
+            <h1>Address</h1>
+            <span>Paniolo</span> <span>15 Kurmangazy</span> <span>Almaty</span>
+            <h1>Phone Number</h1>
+            <span>972-879-4317</span>
+            <h1>Open Everyday</h1>
+            <span>including holidays</span> <span>from 8AM until 1AM</span> <a href="@Url.Content("~/Products/Index")" class="download">&nbsp;</a>
+        </div>
+    

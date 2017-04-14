@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Paniolo.Models.Product>
+
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+        <div class="content">
+            <div>
+                <div>
+                    <h1>Burgers</h1>
+                    <div> <a href="@Url.Content("~/Products/Index")"><img src="~/Content/images/burger.jpg" width="434" height="288" alt=""></a> </div>
+                    <ul>
+
+                    @foreach (var item in Model)
+                    {
+                        if (item.Category == "Burgers")
+                        {
+                        <li>
+                            <h2><a href="@Url.Content("~/Products/Index")">@item.Title</a></h2>
+                            <p>
+                               @item.Description
+                            </p>
+                            <span class="price">@item.Price</span>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "editLink" })
+                        </li>
+                        }
+
+
+
+                    }
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <h1>Menu</h1>
+            <ul class="navigation">
+
+                <li class="first">
+                    <a class="active" href="@Url.Content("~/Products/Index")">BURGERS</a>
+                </li>
+                <li>
+                    <a href="@Url.Content("~/Products/Hotdogs")">HOTDOGS</a>
+                </li>
+                <li>
+                    <a href="shake.html">SHAKES</a>
+                </li>
+                <li>
+                    <a href="breakfast.html">BREAKFAST</a>
+                </li>
+
+            </ul>
+            <a href="@Url.Content("~/Products/Index")" class="download">&nbsp;</a>
+        </div>   

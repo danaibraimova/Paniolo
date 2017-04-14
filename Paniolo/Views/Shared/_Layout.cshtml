@@ -1,0 +1,98 @@
+﻿
+       
+       
+
+<!DOCTYPE html>
+<head>
+    <title>Paniolo Almaty</title>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Emblema+One" rel="stylesheet">
+    <link href="~/Content/css/style.css" rel="stylesheet" type="text/css">
+    <link href="~/Content/css/mystyle.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")   
+    @RenderSection("scripts", required: false)
+    <div id="header">
+        <div id="navlinkscontainer">
+            <a href="@Url.Content("~/Home/Index")"><img class="logo" src="~/Content/images/logo_paniolo.png" width="513" height="84" alt="" title=""></a>
+            <a href="@Url.Content("~/Home/Index")"><img src="~/Content/images/girl.png" width="332" height="205" alt="" title=""></a>
+            <ul class="navigation">
+                <li>
+                    <a class="active" href="@Url.Content("~/Home/Index")">Home</a>
+                </li>
+                <li>
+                    <a href="@Url.Content("~/Home/About")">About</a>
+                </li>
+                <li>
+                    <a href="@Url.Content("~/Products/Index")">Menu</a>
+                </li>
+                <li>
+                    <a href="@Url.Content("~/Home/Contact")">Contact</a>
+                </li>
+                @*<li>
+                        <a href="blog.html">Blog</a>
+                    </li>*@
+            </ul>
+        </div>
+    </div>
+
+    <div id="body">
+        @RenderBody()
+        </div>
+
+
+    <div id="footer">
+        <div>
+            <ul>
+                <li class="first">
+                    <h2>Delivery Hotline</h2>
+                    <h3>Call 0-123-456-789</h3>
+                    <ul>
+                        <li>
+                            <a href="" class="facebook"></a>
+                        </li>
+                        <li>
+                            <a href="" class="twitter"></a>
+                        </li>
+                        <li>
+                            <a href="" class="googleplus"></a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+
+                    <ul class="navigation">
+                        <li>
+                            <a href="@Url.Content("~/Home/Index")">Home</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Content("~/Home/About")">About Us</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Content("~/Products/Index")">Menu</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Content("~/Home/Contact")">Contact Us</a>
+                        </li>
+                    </ul>
+                    <span>&copy; 2017 Paniolo </span>
+                </li>
+                <li class="last">
+                    <h2>Follow Us by Email</h2>
+                    <form action="@Url.Content("~/Home/Index")">
+                        <input type="text" name="subscribe" value="Enter Your Email Here...">
+                        <input type="submit" value="">
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+</body>
+</html>
+
