@@ -282,6 +282,7 @@
     <Content Include="Content\images\shake.jpg" />
     <Content Include="Content\images\shakes.jpg" />
     <Content Include="Content\images\shakes2.jpg" />
+    <Content Include="Content\images\small_4621.png" />
     <Content Include="Content\images\unused\button-download.png" />
     <Content Include="Content\images\unused\button-send.png" />
     <Content Include="Content\images\unused\button-subscribe.png" />
