@@ -1,0 +1,23 @@
+User-agent: Yandex
+Disallow: 
+Host: paniolo.azurewebsites.net/
+Sitemap: hhttp://paniolo.azurewebsites.net//sitemap.xml
+#для Yandex
+
+User-agent: Googlebot
+Disallow: 
+Host: paniolo.azurewebsites.net/
+Sitemap: http://paniolo.azurewebsites.net//sitemap.xml
+#для Google
+
+User-agent: Mail.RU_Bot
+Disallow: 
+Host: paniolo.azurewebsites.net/
+Sitemap: http://paniolo.azurewebsites.net//sitemap.xml
+#для mail.ru
+
+User-agent: *
+Disallow: 
+Host: paniolo.azurewebsites.net/
+Sitemap: http://paniolo.azurewebsites.net//sitemap.xml
+#для всех
