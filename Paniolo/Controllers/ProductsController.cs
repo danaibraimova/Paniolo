@@ -34,6 +34,13 @@ namespace Paniolo.Controllers
             return View(db.Products.ToList());
         }
 
+        public ActionResult Breakfast()
+        {
+
+            return View(db.Products.ToList());
+        }
+
+
         // GET: Products/Details/5
         public ActionResult Details(int? id)
         {

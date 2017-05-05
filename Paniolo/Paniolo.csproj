@@ -393,6 +393,7 @@
     <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\Products\Hotdogs.cshtml" />
     <Content Include="Views\Products\Shakes.cshtml" />
+    <Content Include="Views\Products\Breakfast.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
