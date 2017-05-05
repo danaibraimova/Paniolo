@@ -13,12 +13,12 @@
     <div>
         <div>
             <h1>Breakfast</h1>
-            <div> <a href="@Url.Content("~/Products/Index")"><img src="~/Content/images/shake.jpg" width="434" height="288" alt=""></a> </div>
+            <div> <a href="@Url.Content("~/Products/Index")"><img src="~/Content/images/breakfast2.jpg" width="434" height="288" alt=""></a> </div>
             <ul>
 
                 @foreach (var item in Model)
                 {
-                    if (item.Category == "Shakes")
+                    if (item.Category == "Breakfast")
                     {
                         <li>
                             <h2><a href="@Url.Content("~/Products/Index")">@item.Title</a></h2>
