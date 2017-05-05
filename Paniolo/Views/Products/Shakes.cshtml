@@ -2,7 +2,7 @@
 
 
 @{
-   
+
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -13,12 +13,12 @@
     <div>
         <div>
             <h1>Hotdogs</h1>
-            <div> <a href="@Url.Content("~/Products/Index")"><img src="~/Content/images/hotdog.jpg" width="434" height="288" alt=""></a> </div>
+            <div> <a href="@Url.Content("~/Products/Index")"><img src="~/Content/images/shake.jpg" width="434" height="288" alt=""></a> </div>
             <ul>
 
                 @foreach (var item in Model)
                 {
-                    if (item.Category == "Hotdogs")
+                    if (item.Category == "Shakes")
                     {
                         <li>
                             <h2><a href="@Url.Content("~/Products/Index")">@item.Title</a></h2>
@@ -26,7 +26,7 @@
                                 @item.Description
                             </p>
                             <span class="price">@item.Price</span>
-                            @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "editLink" } )
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ID }, new { @class = "editLink" })
                         </li>
                     }
 
@@ -45,10 +45,10 @@
             <a href="@Url.Content("~/Products/Index")">BURGERS</a>
         </li>
         <li>
-            <a class="active" href="@Url.Content("~/Products/Hotdogs")">HOTDOGS</a>
+            <a  href="@Url.Content("~/Products/Hotdogs")">HOTDOGS</a>
         </li>
         <li>
-            <a href="@Url.Content("~/Products/Shakes")">SHAKES</a>
+            <a class="active" href="@Url.Content("~/Products/Shakes")">SHAKES</a>
         </li>
         <li>
             <a href="breakfast.html">BREAKFAST</a>
