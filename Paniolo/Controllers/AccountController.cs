@@ -13,6 +13,7 @@ using Paniolo.Models;
 namespace Paniolo.Controllers
 {
     [Authorize]
+    [RequireHttps]
     public class AccountController : Controller
     {
         private ApplicationSignInManager _signInManager;

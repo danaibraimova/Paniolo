@@ -70,15 +70,22 @@
                         <li>
                             <a href="@Url.Content("~/Home/Index")">Home</a>
                         </li>
-                        <li>
+                        @*<li>
                             <a href="@Url.Content("~/Home/About")">About Us</a>
-                        </li>
+                        </li>*@
+
+                    
+
                         <li>
                             <a href="@Url.Content("~/Products/Index")">Menu</a>
                         </li>
+                        
                         <li>
                             <a href="@Url.Content("~/Home/Contact")">Contact Us</a>
                         </li>
+                       
+                        <li>@Html.ActionLink("Log In", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+
                     </ul>
                     <span>&copy; 2017 Paniolo </span>
                 </li>

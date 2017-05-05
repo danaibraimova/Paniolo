@@ -782,3 +782,8 @@ img {
 {
     font-family:'NunitoRegular';
 }
+
+#loginForm, #loginButton, #registerForm
+{
+    font-family:'NunitoRegular';
+}

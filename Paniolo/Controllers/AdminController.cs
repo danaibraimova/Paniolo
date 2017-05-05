@@ -1,118 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Data.Entity.Infrastructure;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-using System.Web.Http.Description;
-using Paniolo.Models;
+using System.Web;
+using System.Web.Mvc;
 
 namespace Paniolo.Controllers
 {
-    public class AdminController : ApiController
+    public class AdminController : Controller
     {
-        private MenuContext db = new MenuContext();
-
-        // GET: api/Admin
-        public IQueryable<Product> GetProducts()
+        /*[Authorize(Roles = "Admin, AnotherRole")]*/
+        // GET: Admin
+        /* public ActionResult Index()
+         {
+             return View();
+         }*/
+        [Authorize(Roles = "Admin")]
+        public ContentResult AdminContent()
         {
-            return db.Products;
+            return Content("this is for admin only");
         }
-
-        // GET: api/Admin/5
-        [ResponseType(typeof(Product))]
-        public IHttpActionResult GetProduct(int id)
+        public ContentResult Overt()
         {
-            Product product = db.Products.Find(id);
-            if (product == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(product);
-        }
-
-        // PUT: api/Admin/5
-        [ResponseType(typeof(void))]
-        public IHttpActionResult PutProduct(int id, Product product)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            if (id != product.ID)
-            {
-                return BadRequest();
-            }
-
-            db.Entry(product).State = EntityState.Modified;
-
-            try
-            {
-                db.SaveChanges();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ProductExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return StatusCode(HttpStatusCode.NoContent);
-        }
-
-        // POST: api/Admin
-        [ResponseType(typeof(Product))]
-        public IHttpActionResult PostProduct(Product product)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            db.Products.Add(product);
-            db.SaveChanges();
-
-            return CreatedAtRoute("DefaultApi", new { id = product.ID }, product);
-        }
-
-        // DELETE: api/Admin/5
-        [ResponseType(typeof(Product))]
-        public IHttpActionResult DeleteProduct(int id)
-        {
-            Product product = db.Products.Find(id);
-            if (product == null)
-            {
-                return NotFound();
-            }
-
-            db.Products.Remove(product);
-            db.SaveChanges();
-
-            return Ok(product);
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                db.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
-        private bool ProductExists(int id)
-        {
-            return db.Products.Count(e => e.ID == id) > 0;
+            return Content("this is not");
         }
     }
 }
